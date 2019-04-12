@@ -354,6 +354,19 @@ function onMapClick(e) {
 function selectAdsl(id) {
   $(".adslpc").removeClass("adslpcaktiva");
   $('#adsl_'+id).addClass('adslpcaktiva');
-
+  window.location.href="acceptandpay.php";
   //TODO::   ADSL پرداخت آنلاین
+}
+function selectItemWireless(id) {
+  $(".itemz").removeClass("adslpcaktiva");
+  $('#wire'+id).addClass('adslpcaktiva');
+  window.location.href="acceptandpay.php";
+  //TODO::   Wireless پرداخت آنلاین
+}
+function selectItemTDLTE(id) {
+  $(".itemz").removeClass("adslpcaktiva");
+  $('#TDLTE'+id).addClass('adslpcaktiva');
+
+  window.location.href="acceptandpay.php";
+  //TODO::   TDLTE پرداخت آنلاین
 }

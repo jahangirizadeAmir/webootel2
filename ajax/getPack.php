@@ -68,13 +68,134 @@ if(
 </h4></div>
       <div class="adslp">
         <h4 class="tarefehs">
-'.$rowModel['adslPrice'].'
+'.@$db::toMoney($rowModel['adslPrice']).'
 </h4>
       </div>';
 
             $i++;
 
         }
+    }else if ($model=='2'){
+        $html = '<h3 class="mobileRuzane">
+      بسته‌های روزانه
+    </h3>
+    <div class="containertarefe">
+      <div class="itema">
+<img src="Images/BasteRuzane.svg" class="BasteRuzane">
+      </div>
+      <div class="item3"></div>
+      <div class="item1">
+        <h3 class="tarefehs">
+        ترافیک (گیگ)
+        </h3>
+      </div>
+      <div class="item2">
+        <h3 class="tarefehs">
+قیمت (تومان)
+        </h3>
+      </div>';
+        $Q = $db::Query("SELECT * FROM wireless where wirelessPackModelId='$id' AND wirelessDayNight='1'");
+
+        $cot="'";
+
+        while ($rowModel = mysqli_fetch_assoc($Q)){
+            $html.='<div class="itemz" id="wire'.$rowModel['wirelessId'].'" onclick="selectItemWireless('.$cot.$rowModel['wirelessId'].$cot.')">
+            <i class="fas fa-check"></i>
+                  </div>
+                  <div class="itemx">
+                    <h3 class="tarefehs">
+            '.$rowModel['wirelessTrafic'].'
+                    </h3>
+                  </div>
+                  <div class="itemx">
+                    <h3 class="tarefehs">
+            '.$rowModel['wirelessPrice'].'
+                    </h3>
+                  </div>';
+        }
+
+        $html.='
+</div>
+    <h3 class="mobileRuzane">
+بسته‌های روزانه + شبانه
+    </h3>
+
+    <div class="containertarefe">
+      <div class="itema">
+<img src="Images/BasteShabane.svg" class="BasteRuzane">
+      </div>
+      <div class="item3"></div>
+      <div class="item1">
+        <h3 class="tarefehs">
+        ترافیک (گیگ)
+        </h3>
+      </div>
+      <div class="item2">
+        <h3 class="tarefehs">
+قیمت (تومان)
+        </h3>
+      </div>';
+
+
+        $Q = $db::Query("SELECT * FROM wireless where wirelessPackModelId='$id' AND wirelessDayNight='0'");
+
+        while ($rowModel = mysqli_fetch_assoc($Q)){
+            $html.='<div class="itemz" id="wire'.$rowModel['wirelessId'].'" onclick="selectItemWireless('.$cot.$rowModel['wirelessId'].$cot.')">
+            <i class="fas fa-check"></i>
+                  </div>
+                  <div class="itemx">
+                    <h3 class="tarefehs">
+            '.$rowModel['wirelessTrafic'].'
+                    </h3>
+                  </div>
+                  <div class="itemx">
+                    <h3 class="tarefehs">
+            '.@$db::toMoney($rowModel['wirelessPrice']).'
+                    </h3>
+                  </div>';
+        }
+        $html.='</div>';
+
+    }
+    else if($model=='3'){
+        $html = '<h3 class="mobileRuzane">
+      بسته‌های روزانه
+    </h3>
+    <div class="containertarefe">
+      <div class="itema">
+<img src="Images/BasteRuzane.svg" class="BasteRuzane">
+      </div>
+      <div class="item3"></div>
+      <div class="item1">
+        <h3 class="tarefehs">
+        ترافیک (گیگ)
+        </h3>
+      </div>
+      <div class="item2">
+        <h3 class="tarefehs">
+قیمت (تومان)
+        </h3>
+      </div>'
+      ;
+        $Q = $db::Query("SELECT * FROM tdlte where tdltePackModelId='$id'");
+        $cot="'";
+        while ($rowModel = mysqli_fetch_assoc($Q)){
+            $html.='<div class="itemz" id="TDLTE'.$rowModel['tdlteId'].'" onclick="selectItemTDLTE('.$cot.$rowModel['tdlteId'].$cot.')">
+          <i class="fas fa-check"></i>
+      </div>
+      <div class="itemx">
+        <h3 class="tarefehs">
+        '.$rowModel['tdlteTraffic'].'
+        </h3>
+      </div>
+      <div class="itemx">
+        <h3 class="tarefehs">
+        '.$rowModel['tdltePrice'].'
+        </h3>
+      </div>';
+        }
+        $html.='</div>';
+
     }
 
     $call = array("error"=>false,"html"=>$html);
