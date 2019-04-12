@@ -180,9 +180,7 @@
 قیمت (تومان)
         </h3>
       </div>
-      <div class="itemz">
-<i class="fas fa-check"></i>
-      </div>
+      <div class="itemz"><i class="fas fa-check"></i></div>
       <div class="itemx">
         <h3 class="tarefehs">
 ۲۰
@@ -193,9 +191,7 @@
 ۴۵۰۰۰
         </h3>
       </div>
-      <div class="itemz">
-<i class="fas fa-check"></i>
-      </div>
+      <div class="itemz"><i class="fas fa-check"></i></div>
       <div class="itemx">
         <h3 class="tarefehs">
 ۴۰
@@ -207,9 +203,7 @@
 ۷۵۰۰۰
         </h3>
       </div>
-      <div class="itemz">
-<i class="fas fa-check"></i>
-      </div>
+      <div class="itemz"><i class="fas fa-check"></i></div>
       <div class="itemx">
         <h3 class="tarefehs">
 ۷۰
@@ -220,9 +214,7 @@
 ۱۱۰۰۰۰
         </h3>
       </div>
-      <div class="itemz">
-<i class="fas fa-check"></i>
-      </div>
+      <div class="itemz"><i class="fas fa-check"></i></div>
       <div class="itemx">
 
         <h3 class="tarefehs">
@@ -238,95 +230,16 @@
 
 
 
-    <h3 class="mobileRuzane">
-بسته‌های روزانه + شبانه
-    </h3>
-
-    <div class="containertarefe">
-      <div class="itema">
-<img src="Images/BasteShabane.svg" class="BasteRuzane">
-      </div>
-      <div class="item3"></div>
-      <div class="item1">
-        <h3 class="tarefehs">
-        ترافیک (گیگ)
-        </h3>
-      </div>
-      <div class="item2">
-        <h3 class="tarefehs">
-قیمت (تومان)
-        </h3>
-      </div>
-      <div class="itemz">
-<i class="fas fa-check"></i>
-      </div>
-      <div class="itemx">
-        <h3 class="tarefehs">
-۲۰ + ۱۰ شبانه
-        </h3>
-      </div>
-      <div class="itemx">
-        <h3 class="tarefehs">
-۵۴۰۰۰
-        </h3>
-      </div>
-      <div class="itemz">
-<i class="fas fa-check"></i>
-      </div>
-      <div class="itemx">
-        <h3 class="tarefehs">
-۴۰ + ۲۰ شبانه
-        </h3>
-      </div>
-      <div class="itemx">
-
-        <h3 class="tarefehs">
-۹۰۰۰۰
-        </h3>
-      </div>
-      <div class="itemz">
-<i class="fas fa-check"></i>
-      </div>
-      <div class="itemx">
-        <h3 class="tarefehs">
-۷۰ + ۳۵ شبانه
-        </h3>
-      </div>
-      <div class="itemx">
-        <h3 class="tarefehs">
-۱۳۲۰۰۰
-        </h3>
-      </div>
-      <div class="itemz">
-<i class="fas fa-check"></i>
-      </div>
-      <div class="itemx">
-
-        <h3 class="tarefehs">
-۱۰۰ + ۵۰ شبانه
-        </h3>
-      </div>
-      <div class="itemx">
-        <h3 class="tarefehs">
-۱۸۰۰۰۰
-        </h3>
-      </div>
-    </div><!--containertarefe yek mahe-->
 
 
-
-
-    <h3 class="tarefeinformationtext mta">
-      بسته‌های شبانه از ۲ تا ۷ صبح قابل استفاده است.
-    </h3>
 
     <h3 class="tarefeinformationtext mba">
-سرعت تمامی بسته‌ها تا ۲۴ مگابیت بر ثانیه آزاد است.
+سرعت تمامی بسته‌ها تا ۴۰ مگابیت بر ثانیه آزاد است.
 </h3>
   </div>
 
   <div class="NCsubaPartoButonoj">
-    <a class="NCsubaPartoButonojmem1" id="PetoPorEbleco" href="newCostumers2.html">
+    <a class="NCsubaPartoButonojmem1" id="PetoPorEbleco" href="newCostumers2.php">
 تایید
 </a>
     <a href="#smootScrollReveno" class="NCsubaPartoButonojmem2" id="revenoHoghughi">

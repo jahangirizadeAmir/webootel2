@@ -162,84 +162,199 @@
     </div>
 
 
-    <h3 class="mobileRuzane">
-      بسته‌های روزانه
-    </h3>
-    <div class="containertarefe">
-      <div class="itema">
-<img src="Images/BasteRuzane.svg" class="BasteRuzane">
+    <div class="adsltarefeujo">
+      <div class="adslptel">
+        <h5 class="tarefehs">
+انتخاب
+</h5>
       </div>
-      <div class="item3"></div>
-      <div class="item1">
+      <div class="adslpt">
         <h3 class="tarefehs">
-        ترافیک (گیگ)
+سرعت
         </h3>
       </div>
-      <div class="item2">
+      <div class="adslpt">
+        <h5 class="tarefehs">
+ترافیک منصفانه‌ی داخلی <br>(گیگ)
+</h5>
+      </div>
+      <div class="adslpt">
+        <h5 class="tarefehs">
+ترافیک منصفانه‌ی بین‌المللی <br>(گیگ)
+</h5>
+      </div>
+      <div class="adslpt">
         <h3 class="tarefehs">
 قیمت (تومان)
         </h3>
       </div>
-      <div class="itemz"><i class="fas fa-check"></i></div>
-      <div class="itemx">
-        <h3 class="tarefehs">
-۲۰
-        </h3>
+      <div class="adslpc" id="adsl_1">
+<i class="fas fa-check"></i>
       </div>
-      <div class="itemx">
-        <h3 class="tarefehs">
-۴۵۰۰۰
-        </h3>
+      <div class="adslp" id="adsl_1">
+        <h4 class="tarefehs">
+۵۱۲ کیلوبیت بر ثانیه
+</h4>
       </div>
-      <div class="itemz"><i class="fas fa-check"></i></div>
-      <div class="itemx">
-        <h3 class="tarefehs">
+      <div class="adslp">
+        <h4 class="tarefehs">
+۳۰
+</h4>
+      </div>
+      <div class="adslp">
+
+        <h4 class="tarefehs">
+۱۵</h4></div>
+      <div class="adslp">
+        <h4 class="tarefehs">
+۱۲۵۰۰
+</h4>
+      </div>
+      <div class="adslpc" id="adsl_2">
+<i class="fas fa-check"></i>
+      </div>
+      <div class="adslp" id="adsl_2">
+        <h4 class="tarefehs">
+۱۰۲۴ کیلوبیت بر ثانیه
+</h4>
+      </div>
+      <div class="adslp">
+        <h4 class="tarefehs">
+۵۰
+</h4>
+      </div>
+        <div class="adslp">
+
+          <h4 class="tarefehs">
+۲۵
+  </h4>
+</div>
+      <div class="adslp">
+        <h4 class="tarefehs">
+۲۰۰۰۰
+</h4>
+      </div>
+      <div class="adslpc" id="adsl_3">
+<i class="fas fa-check"></i>
+      </div>
+      <div class="adslp" id="adsl_3">
+        <h4 class="tarefehs">
+۲۰۴۸ کیلوبیت بر ثانیه
+</h4>
+      </div>
+      <div class="adslp">
+        <h4 class="tarefehs">
+۸۰
+</h4>
+      </div>
+      <div class="adslp">
+        <h4 class="tarefehs">
 ۴۰
-        </h3>
+</h4>
       </div>
-      <div class="itemx">
-
-        <h3 class="tarefehs">
-۷۵۰۰۰
-        </h3>
+      <div class="adslp">
+        <h4 class="tarefehs">
+۲۵۰۰۰
+</h4>
       </div>
-      <div class="itemz"><i class="fas fa-check"></i></div>
-      <div class="itemx">
-        <h3 class="tarefehs">
-۷۰
-        </h3>
+      <div class="adslpc" id="adsl_4">
+<i class="fas fa-check"></i>
       </div>
-      <div class="itemx">
-        <h3 class="tarefehs">
-۱۱۰۰۰۰
-        </h3>
+      <div class="adslp" id="adsl_4">
+        <h4 class="tarefehs">
+۳۰۷۲ کیلوبیت بر ثانیه
+</h4>
       </div>
-      <div class="itemz"><i class="fas fa-check"></i></div>
-      <div class="itemx">
-
-        <h3 class="tarefehs">
-۱۰۰
-        </h3>
+      <div class="adslp">
+        <h4 class="tarefehs">
+۱۲۰
+</h4>
       </div>
-      <div class="itemx">
-        <h3 class="tarefehs">
-۱۵۰۰۰۰
-        </h3>
+      <div class="adslp">
+        <h4 class="tarefehs">
+۶۰
+</h4>
       </div>
-    </div><!--containertarefe yek mahe-->
+      <div class="adslp">
+        <h4 class="tarefehs">
+۳۵۰۰۰</h4>
+      </div>
+      <div class="adslpc" id="adsl_5">
+<i class="fas fa-check"></i>
+      </div>
+        <div class="adslp" id="adsl_5">
+          <h4 class="tarefehs">
+  ۴۰۹۶ کیلوبیت بر ثانیه
+  </h4>
+        </div>
+      <div class="adslp">
+        <h4 class="tarefehs">
+۱۸۰
+</h4>
+      </div>
+      <div class="adslp">
+
+        <h4 class="tarefehs">
+۹۰۰
+</h4></div>
+      <div class="adslp">
+
+        <h4 class="tarefehs">
+۴۰۰۰۰
+</h4>
+</div>
+      <div class="adslpc" id="adsl_6">
+<i class="fas fa-check"></i>
+      </div>
+      <div class="adslp" id="adsl_6">
+        <h4 class="tarefehs">
+۸۱۹۲ کیلوبیت بر ثانیه
+</h4>
+      </div>
+      <div class="adslp">
+        <h4 class="tarefehs">
+۴۰۰
+</h4>
+      </div>
+      <div class="adslp">
+        <h4 class="tarefehs">
+۲۰۰</h4>
+      </div>
+      <div class="adslp">
+        <h4 class="tarefehs">
+۵۰۰۰۰
+</h4>
+      </div>
+      <div class="adslpc" id="adsl_7">
+<i class="fas fa-check"></i>
+      </div>
+      <div class="adslp" id="adsl_7">
+        <h4 class="tarefehs">
+۱۶۳۸۴ کیلوبیت بر ثانیه
+</h4>
+      </div>
+      <div class="adslp">
+        <h4 class="tarefehs">
+۲۰۰۰
+</h4>
+      </div>
+        <div class="adslp">
+          <h4 class="tarefehs">
+۱۰۰۰  </h4>
+        </div>
+      <div class="adslp">
+        <h4 class="tarefehs">
+۸۰۰۰۰
+</h4>
+      </div>
+    </div>
 
 
 
-
-
-
-    <h3 class="tarefeinformationtext mba">
-سرعت تمامی بسته‌ها تا ۴۰ مگابیت بر ثانیه آزاد است.
-</h3>
   </div>
 
   <div class="NCsubaPartoButonoj">
-    <a class="NCsubaPartoButonojmem1" id="PetoPorEbleco" href="newCostumers2.html">
+    <a class="NCsubaPartoButonojmem1" id="PetoPorEbleco" href="newCostumers2.php">
 تایید
 </a>
     <a href="#smootScrollReveno" class="NCsubaPartoButonojmem2" id="revenoHoghughi">

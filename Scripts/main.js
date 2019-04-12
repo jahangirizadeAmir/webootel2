@@ -141,12 +141,40 @@ $(".sidebar").removeClass("sidebarActive");
       success: function (data) {
         if(data['error']){
           $('#error').html(data['MSG']).show();
+          $('html, body').animate({
+            scrollTop: $("#error").offset().top
+          }, 600);
         }else{
           $(".NCsubaParto2").hide();
           $(".NCsubaParto3").css("display", "flex");
         }
       }
 
+    });
+
+  });
+
+
+  $('#PetoPorEbleco1').click(function () {
+
+
+    var accCode = $('#acceptCode').val();
+    $.ajax({
+      url:"ajax/checkService.php",
+      data:{
+        number:accCode
+      },
+      dataType:'json',
+      type:'post',
+      success: function (data) {
+        if(data['error']){
+          $('#error2').show();
+        }else{
+
+          window.location.href="newCostumers2.php";
+
+        }
+      }
     });
 
   });
@@ -167,16 +195,16 @@ $(".sidebar").removeClass("sidebarActive");
   });
 
   $("#HaghighiN").click(function(){
-    $(".ncpasxo2bildujo").hide()
-    $(".NCsubaPartoTekstomemHaHo").hide()
-    $("#NCIHa").css("display", "flex")
-  })
+    $(".ncpasxo2bildujo").hide();
+    $(".NCsubaPartoTekstomemHaHo").hide();
+    $("#NCIHa").css("display", "flex");
+  });
 
   $("#HoghughiN").click(function(){
-    $(".ncpasxo2bildujo").hide()
-    $(".NCsubaPartoTekstomemHaHo").hide()
-    $("#NCIHo").css("display", "flex")
-  })
+    $(".ncpasxo2bildujo").hide();
+    $(".NCsubaPartoTekstomemHaHo").hide();
+    $("#NCIHo").css("display", "flex");
+  });
 
 
   $("#revenoHaghighi").click(function(){

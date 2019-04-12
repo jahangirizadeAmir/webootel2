@@ -214,17 +214,20 @@ include "inc/header.php";
       لطفا کد تاییدیه امکان‌سنجی که به تلفن همراه شما ارسال شده است را وارد کنید. در صورت صحیح بودن کد به مرحله‌ی بعدی ثبت نام منتقل خواهید شد.
     </h3>
     <form class="formujo6">
-      <h4 class="registerFormHeader">
+      <h4 class="registerFormHeader" id="error2" style="color:red;display: none;">
+  کد تاییده اشتباه است
+  </h4>
+        <h4 class="registerFormHeader">
   کد تاییدیه
   </h4>
-      <input type="text" class="textInput birthdateujo" name="acceptCode">
+      <input type="text" class="textInput birthdateujo" id="acceptCode">
     </form>
 
   </div>
   <div class="NCsubaPartoButonoj">
-    <a class="NCsubaPartoButonojmem1" id="PetoPorEbleco1" href="newCostumers2.html">
+    <span class="NCsubaPartoButonojmem1" id="PetoPorEbleco1" >
 تایید
-</a>
+</span>
     <a href="#smootScrollReveno" class="NCsubaPartoButonojmem2" id="miJaFarisReveno">
 بازگشت
 </a>
