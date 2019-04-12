@@ -141,6 +141,9 @@ $(".sidebar").removeClass("sidebarActive");
       success: function (data) {
         if(data['error']){
           $('#error').html(data['MSG']).show();
+          $('html, body').animate({
+            scrollTop: $("#error").offset().top
+          }, 600);
         }else{
           $(".NCsubaParto2").hide();
           $(".NCsubaParto3").css("display", "flex");

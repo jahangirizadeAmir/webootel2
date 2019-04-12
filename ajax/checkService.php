@@ -19,6 +19,8 @@ if(
     $Q = $db::Query("SELECT * FROM checkService where serviceOk='1' AND serviceId='$number'",$db::$NUM_ROW);
     if($Q===1){
         $call = array("error"=>false);
+        session_start();
+        $_SESSION['number']=$number;
     }else{
         $call = array("error"=>true);
     }
