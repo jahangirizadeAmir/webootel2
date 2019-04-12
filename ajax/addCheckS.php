@@ -27,6 +27,7 @@ if(
     $date=$db::GetDate();
     $time = $db::GetTime();
 
+
     $Q = $db::Query("INSERT INTO checkService 
           (serviceName, serviceMobile, serviceTell, serviceAddress, 
           servicePostalCode,serviceModel, serviceLat, serviceLng,
