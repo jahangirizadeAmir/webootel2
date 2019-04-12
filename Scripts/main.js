@@ -91,7 +91,7 @@ $(".sidebar").removeClass("sidebarActive");
     $(".formHeaderpart3").addClass("formHeaderpartAktive")
     $(".formMain2").hide()
     $(".formMain3").css("display", "flex")
-  })
+  });
 
   $("#PetoPorEbleco").click(function(){
     $(".NCsubaParto").hide();
@@ -106,7 +106,7 @@ $(".sidebar").removeClass("sidebarActive");
     }).addTo(mymap);
     mymap.on('click', onMapClick);
 
-  })
+  });
 
   $("#sendoPetoPorEbleco").click(function(){
     var name,mobile,tell,address,postalCode,serviceModel,lat,lng;
