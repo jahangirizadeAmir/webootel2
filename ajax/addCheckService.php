@@ -28,11 +28,11 @@ if(
     $time = $db::GetTime();
 
     $Q = $db::Query("INSERT INTO checkService 
-          (serviceId, serviceName, serviceMobile, serviceTell, serviceAddress, 
+          (serviceName, serviceMobile, serviceTell, serviceAddress, 
           servicePostalCode,serviceModel, serviceLat, serviceLng,
            serviceDate, serviceTime,serviceOk,serviceDesc) VALUES
                                             (
-                                             '','$name','$mobile','$tell','$address',
+                                             $name','$mobile','$tell','$address',
                                              '$postalCode','$serviceModel','$lat','$lng',
                                              '$date','$time','',''
                                             )");
