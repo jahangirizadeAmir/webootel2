@@ -235,9 +235,10 @@ $(".sidebar").removeClass("sidebarActive");
   })
 
   $(".adslpc").click(function(){
-    $(".adslpc").removeClass("adslpcaktiva")
-    $(this).toggleClass("adslpcaktiva")
-  })
+    alert("");
+    $(".adslpc").removeClass("adslpcaktiva");
+    $(this).toggleClass("adslpcaktiva");
+  });
 
   $(".CostSTipoujo").click(function(){
     $(".CostSTipoujo").removeClass("CostSTipoujoActive")
@@ -350,3 +351,9 @@ function onMapClick(e) {
   newMarker = new L.marker(e.latlng).addTo(mymap);
 }
 
+function selectAdsl(id) {
+  $(".adslpc").removeClass("adslpcaktiva");
+  $('#adsl_'+id).addClass('adslpcaktiva');
+
+  //TODO::   ADSL پرداخت آنلاین
+}
