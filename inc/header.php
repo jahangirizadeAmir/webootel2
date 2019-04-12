@@ -17,6 +17,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"><!--FontAwesome-->
     <meta name="theme-color" content="#742a9d"><!--Chrome Theme-->
     <link rel="icon" href="favicon.svg" type="image/svg+xml"><!--Icons-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="Style/bootstrap.css">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body class="mainPage">
 <div class="sidebar"><!--sidebar menu-->
