@@ -125,7 +125,7 @@ $(".sidebar").removeClass("sidebarActive");
      lat = $('#lat').val();
      lng = $('#lng').val();
     $.ajax({
-      url:"ajax/addCheckService.php",
+      url:"ajax/addCheckS.php",
       data:{
         name:name,
         mobile:mobile,
