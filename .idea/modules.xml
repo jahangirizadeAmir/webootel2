@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
-      <module fileurl="file://$PROJECT_DIR$/.idea/webootel2.iml" filepath="$PROJECT_DIR$/.idea/webootel2.iml" />
-=======
       <module fileurl="file://$PROJECT_DIR$/.idea/New folder.iml" filepath="$PROJECT_DIR$/.idea/New folder.iml" />
->>>>>>> c0c5f643ddd48cbd8a41a689582ad78a7194b661
     </modules>
   </component>
 </project>
