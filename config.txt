@@ -8,3 +8,6 @@ man 1
 woman 0
 
 
+night 0
+day 1
+

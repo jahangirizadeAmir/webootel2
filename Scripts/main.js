@@ -181,125 +181,93 @@ $(".sidebar").removeClass("sidebarActive");
 
   $("#sendoPetoPorEblecoReveno").click(function(){
     $(".NCsubaParto2").hide();
-    $(".NCsubaParto").css("display", "flex")
+    $(".NCsubaParto").css("display", "flex");
   });
-
   $("#miJaFaris").click(function(){
     $(".NCsubaParto").hide();
     $(".NCsubaParto4").css("display", "flex")
   });
-
   $("#miJaFarisReveno").click(function(){
     $(".NCsubaParto4").hide();
-    $(".NCsubaParto").css("display", "flex")
+    $(".NCsubaParto").css("display", "flex");
   });
-
   $("#HaghighiN").click(function(){
     $(".ncpasxo2bildujo").hide();
     $(".NCsubaPartoTekstomemHaHo").hide();
     $("#NCIHa").css("display", "flex");
   });
-
   $("#HoghughiN").click(function(){
     $(".ncpasxo2bildujo").hide();
     $(".NCsubaPartoTekstomemHaHo").hide();
     $("#NCIHo").css("display", "flex");
   });
-
-
   $("#revenoHaghighi").click(function(){
-    $(".ncpasxo2bildujo").css("display", "flex")
-    $(".NCsubaPartoTekstomem").css("display", "block")
-    $("#NCIHa").hide()
-  })
-
+    $(".ncpasxo2bildujo").css("display", "flex");
+    $(".NCsubaPartoTekstomem").css("display", "block");
+    $("#NCIHa").hide();
+  });
   $("#revenoHoghughi").click(function(){
-    $(".ncpasxo2bildujo").css("display", "flex")
-    $(".NCsubaPartoTekstomem").css("display", "block")
-    $("#NCIHo").hide()
-  })
-
+    $(".ncpasxo2bildujo").css("display", "flex");
+    $(".NCsubaPartoTekstomem").css("display", "block");
+    $("#NCIHo").hide();
+  });
   $(".hoTypeujo").click(function(){
-    $(".hoTypeelektujo").toggleClass("hoTypeelektujoAktiva")
-    $(".hoTypeujo").toggleClass("hoTypeujoAktiva")
-  })
-
+    $(".hoTypeelektujo").toggleClass("hoTypeelektujoAktiva");
+    $(".hoTypeujo").toggleClass("hoTypeujoAktiva");
+  });
   $(".hoTypeElekto").click(function(){
-    $(".hoTypeelektujo").removeClass("hoTypeelektujoAktiva")
-    $(".hoTypeujo").removeClass("hoTypeujoAktiva")
-  })
-
+    $(".hoTypeelektujo").removeClass("hoTypeelektujoAktiva");
+    $(".hoTypeujo").removeClass("hoTypeujoAktiva");
+  });
   $(".itemz").click(function(){
-    $(".itemz").removeClass("itemzAktiva")
-    $(this).toggleClass("itemzAktiva")
-  })
-
+    $(".itemz").removeClass("itemzAktiva");
+    $(this).toggleClass("itemzAktiva");
+  });
   $(".adslpc").click(function(){
-    $(".adslpc").removeClass("adslpcaktiva")
-    $(this).toggleClass("adslpcaktiva")
-  })
-
+    $(".adslpc").removeClass("adslpcaktiva");
+    $(this).toggleClass("adslpcaktiva");
+  });
   $(".CostSTipoujo").click(function(){
-    $(".CostSTipoujo").removeClass("CostSTipoujoActive")
-    $(this).addClass("CostSTipoujoActive")
-
-  })
-
-
-
-
+    $(".CostSTipoujo").removeClass("CostSTipoujoActive");
+    $(this).addClass("CostSTipoujoActive");
+  });
 $("#costWirelessE").click(function(){
-  $("#costWireless").css("display", "grid")
-  $("#costTDLTE").css("display", "none")
-  $("#costADSL").css("display", "none")
-  $("#costFilterWireless").css("display", "flex")
-  $("#costFilterTDLTE").css("display", "none")
-  $("#costFilterADSL").css("display", "none")
-})
-
+  $("#costWireless").css("display", "grid");
+  $("#costTDLTE").css("display", "none");
+  $("#costADSL").css("display", "none");
+  $("#costFilterWireless").css("display", "flex");
+  $("#costFilterTDLTE").css("display", "none");
+  $("#costFilterADSL").css("display", "none");
+});
 $("#costtdlteE").click(function(){
-  $("#costTDLTE").css("display", "grid")
-  $("#costWireless").css("display", "none")
-  $("#costFilterWireless").css("display", "none")
-  $("#costFilterADSL").css("display", "none")
-  $("#costADSL").css("display", "none")
-  $("#costFilterTDLTE").css("display", "flex")
-})
-
+  $("#costTDLTE").css("display", "grid");
+  $("#costWireless").css("display", "none");
+  $("#costFilterWireless").css("display", "none");
+  $("#costFilterADSL").css("display", "none");
+  $("#costADSL").css("display", "none");
+  $("#costFilterTDLTE").css("display", "flex");
+});
   $("#costADSLE").click(function(){
-    $("#costTDLTE").css("display", "none")
-    $("#costWireless").css("display", "none")
-    $("#costFilterWireless").css("display", "none")
-    $("#costFilterTDLTE").css("display", "none")
-    $("#costFilterADSL").css("display", "flex")
-    $("#costADSL").css("display", "grid")
-
-
-})
-
-
-
-
-
-
-
-
-
-
+    $("#costTDLTE").css("display", "none");
+    $("#costWireless").css("display", "none");
+    $("#costFilterWireless").css("display", "none");
+    $("#costFilterTDLTE").css("display", "none");
+    $("#costFilterADSL").css("display", "flex");
+    $("#costADSL").css("display", "grid");
+});
 //scroll smooth
 $('a[href*="#"]')
   .not('[href="#"]')
   .not('[href="#0"]')
   .click(function(event) {
     if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '')
       &&
-      location.hostname == this.hostname
+      location.hostname === this.hostname
     ) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
-
         event.preventDefault();
         $('html, body').animate({
           scrollTop: target.offset().top
@@ -311,35 +279,26 @@ $('a[href*="#"]')
           } else {
             $target.attr('tabindex','-1');
             $target.focus();
-          };
+          }
         });
       }
     }
   });
-
-
-
   var rangeSlider = function(){
     var slider = $('.range-slider'),
         range = $('.range-slider__range'),
         value = $('.range-slider__value');
-
     slider.each(function(){
-
       value.each(function(){
         var value = $(this).prev().attr('value');
         $(this).html(value);
       });
-
       range.on('input', function(){
         $(this).next(value).html(this.value);
       });
     });
   };
-
   rangeSlider();
-
-
 });
 function onMapClick(e) {
   if (newMarker!=='') {
@@ -349,4 +308,22 @@ function onMapClick(e) {
   $('#lng').val(e.latlng.lng);
   newMarker = new L.marker(e.latlng).addTo(mymap);
 }
-
+function selectAdsl(id) {
+  $(".adslpc").removeClass("adslpcaktiva");
+  $('#adsl_'+id).addClass('adslpcaktiva');
+  window.location.href="acceptandpay.php";
+  //TODO::   ADSL پرداخت آنلاین
+}
+function selectItemWireless(id) {
+  $(".itemz").removeClass("adslpcaktiva");
+  $('#wire'+id).addClass('adslpcaktiva');
+  window.location.href="acceptandpay.php";
+  window.location.href="acceptandpay.php";
+  //TODO::   Wireless پرداخت آنلاین
+}
+function selectItemTDLTE(id) {
+  $(".itemz").removeClass("adslpcaktiva");
+  $('#TDLTE'+id).addClass('adslpcaktiva');
+  window.location.href="acceptandpay.php";
+  //TODO::   TDLTE پرداخت آنلاین
+}

@@ -17,19 +17,19 @@
         <a href="#" class="fas fa-times fermbutono" id="fermbutono"></a>
       </div>
       <a href="index.php" class="sidebarlinks">صفحه نخست</a>
-      <a href="WhyWebotel.html" class="sidebarlinks">چرا وبوتل</a>
+      <a href="WhyWebotel.php" class="sidebarlinks">چرا وبوتل</a>
       <a href="#" class="sidebarlinks">پشتیبانی</a>
       <a href="#" class="sidebarlinks">وبلاگ</a>
-      <a href="aboutUs.html" class="sidebarlinks">درباره‌ی وبوتل</a>
+      <a href="aboutUs.php" class="sidebarlinks">درباره‌ی وبوتل</a>
     </div><!--sidebar menu-->
     <div class="header"> <!--header in desktop view-->
       <div class="rightPart">
         <a href="#"><img src="Images/Logo.svg" alt="Logo" class="logo"></a>
         <a href="index.php" class="linksHeader">صفحه نخست</a>
-        <a href="WhyWebotel.html" class="linksHeader">چرا وبوتل</a>
+        <a href="WhyWebotel.php" class="linksHeader">چرا وبوتل</a>
         <a href="#" class="linksHeader">پشتیبانی</a>
         <a href="#" class="linksHeader">وبلاگ</a>
-        <a href="aboutUs.html" class="linksHeader">درباره‌ی وبوتل</a>
+        <a href="aboutUs.php" class="linksHeader">درباره‌ی وبوتل</a>
         <div class="menuIcon">
           <a href="#" class="fas fa-bars MIcon" id="menubutono"></a>
         </div>

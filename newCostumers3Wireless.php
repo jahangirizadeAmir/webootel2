@@ -1,48 +1,8 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-  <head>
-    <meta charset="utf-8">
-    <title>وبوتل</title>
-    <link rel="stylesheet" href="Style/style.css"><!--Main Style-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jQuery-->
-    <script type="text/javascript" src="Scripts/main.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"><!--FontAwesome-->
-    <meta name="theme-color" content="#742a9d"><!--Chrome Theme-->
-    <link rel="icon" href="favicon.svg" type="image/svg+xml"><!--Icons-->
-  </head>
-  <body class="otherPages">
-    <div class="sidebar"><!--sidebar menu-->
-      <div class="">
-        <a href="#" class="fas fa-times fermbutono" id="fermbutono"></a>
-      </div>
-      <a href="index.php" class="sidebarlinks">صفحه نخست</a>
-      <a href="WhyWebotel.html" class="sidebarlinks">چرا وبوتل</a>
-      <a href="#" class="sidebarlinks">پشتیبانی</a>
-      <a href="#" class="sidebarlinks">وبلاگ</a>
-      <a href="aboutUs.html" class="sidebarlinks">درباره‌ی وبوتل</a>
-    </div><!--sidebar menu-->
-    <div class="header"> <!--header in desktop view-->
-      <div class="rightPart">
-        <a href="#"><img src="Images/Logo.svg" alt="Logo" class="logo"></a>
-        <a href="index.php" class="linksHeader">صفحه نخست</a>
-        <a href="WhyWebotel.html" class="linksHeader">چرا وبوتل</a>
-        <a href="#" class="linksHeader">پشتیبانی</a>
-        <a href="#" class="linksHeader">وبلاگ</a>
-        <a href="aboutUs.html" class="linksHeader">درباره‌ی وبوتل</a>
-        <div class="menuIcon">
-          <a href="#" class="fas fa-bars MIcon" id="menubutono"></a>
-        </div>
-      </div><!--rightPart-->
-      <div class="leftPart">
-        <a href="tel:1858" class="fas fa-phone phoneN"> ۱۸۵۸</a>
-        <a href="#" class="logSig">ثبت نام جدید</a>
-        <a href="#" class="logSig">ورود مشترکین</a>
-      </div><!--leftPart-->
-
-
-
-    </div><!--header in desktop view-->
+<?php
+include "class/dataBase.php";
+$db=new dataBase();
+include "inc/header.php";
+?>
 
 <div class="registerHNNBack">
   <div class="registerHNN">
@@ -128,190 +88,55 @@
     </h3>
 
     <div class="monatujo">
-      <div class="monatomem monatomemAktiva">
-        <h1>
-          ۱
-          <br>
-          ماهه
-        </h1>
-      </div><!--1-->
+        <?php
+        $i=0;
+        $Q = $db::Query("SELECT * FROM packModel where modelService='2'");
+        while ($row = mysqli_fetch_assoc($Q)){
+            $month = $row['packModelMonth'];
 
-      <div class="monatomem">
-        <h1>
-          ۳
-          <br>
-          ماهه
-        </h1>
-      </div><!--3-->
+            $MQ = $db::Query("SELECT * FROM month where monthId='$month'",$db::$RESULT_ARRAY);
+            $name = $MQ['monthName'];
 
-      <div class="monatomem">
-        <h1>
-          ۶
-          <br>
-          ماهه
-        </h1>
-      </div><!--6-->
+            ?>
+            <div id="BTN<?php echo $row['packModelId'] ?>" class="monatomem" onclick="selectBox('<?php echo $row['packModelId'] ?>')">
+                <h1>
+                    <?php echo $name?>
+                </h1>
+            </div><!--1-->
+            <?
+            $i++;
+        }
+        ?>
 
-      <div class="monatomem">
-        <h1>
-          ۱
-          <br>
-        ساله
-        </h1>
-      </div><!--12-->
+        <script>
+            function selectBox(id) {
+                $(".monatomem").removeClass("monatomemAktiva");
+                $("#BTN"+id).addClass("monatomemAktiva");
+                var ADSLTBL = $('#ADSLTBL');
+                $.ajax({
+                    url:"ajax/getPack.php",
+                    data:{
+                        id:id,
+                        model:'2'
+                    },
+                    dataType:'json',
+                    type:'post',
+                    success: function (data) {
+                        if(data['error']){
+                            $("#WirelessContent").html("");
+                        }else{
+                            $("#WirelessContent").html(data['html']);
+                        }
+                    }
+
+                });
+            }
+        </script>
+
+
     </div>
 
-
-    <h3 class="mobileRuzane">
-      بسته‌های روزانه
-    </h3>
-    <div class="containertarefe">
-      <div class="itema">
-<img src="Images/BasteRuzane.svg" class="BasteRuzane">
-      </div>
-      <div class="item3"></div>
-      <div class="item1">
-        <h3 class="tarefehs">
-        ترافیک (گیگ)
-        </h3>
-      </div>
-      <div class="item2">
-        <h3 class="tarefehs">
-قیمت (تومان)
-        </h3>
-      </div>
-      <div class="itemz">
-<i class="fas fa-check"></i>
-      </div>
-      <div class="itemx">
-        <h3 class="tarefehs">
-۲۰
-        </h3>
-      </div>
-      <div class="itemx">
-        <h3 class="tarefehs">
-۴۵۰۰۰
-        </h3>
-      </div>
-      <div class="itemz">
-<i class="fas fa-check"></i>
-      </div>
-      <div class="itemx">
-        <h3 class="tarefehs">
-۴۰
-        </h3>
-      </div>
-      <div class="itemx">
-
-        <h3 class="tarefehs">
-۷۵۰۰۰
-        </h3>
-      </div>
-      <div class="itemz">
-<i class="fas fa-check"></i>
-      </div>
-      <div class="itemx">
-        <h3 class="tarefehs">
-۷۰
-        </h3>
-      </div>
-      <div class="itemx">
-        <h3 class="tarefehs">
-۱۱۰۰۰۰
-        </h3>
-      </div>
-      <div class="itemz">
-<i class="fas fa-check"></i>
-      </div>
-      <div class="itemx">
-
-        <h3 class="tarefehs">
-۱۰۰
-        </h3>
-      </div>
-      <div class="itemx">
-        <h3 class="tarefehs">
-۱۵۰۰۰۰
-        </h3>
-      </div>
-    </div><!--containertarefe yek mahe-->
-
-
-
-    <h3 class="mobileRuzane">
-بسته‌های روزانه + شبانه
-    </h3>
-
-    <div class="containertarefe">
-      <div class="itema">
-<img src="Images/BasteShabane.svg" class="BasteRuzane">
-      </div>
-      <div class="item3"></div>
-      <div class="item1">
-        <h3 class="tarefehs">
-        ترافیک (گیگ)
-        </h3>
-      </div>
-      <div class="item2">
-        <h3 class="tarefehs">
-قیمت (تومان)
-        </h3>
-      </div>
-      <div class="itemz">
-<i class="fas fa-check"></i>
-      </div>
-      <div class="itemx">
-        <h3 class="tarefehs">
-۲۰ + ۱۰ شبانه
-        </h3>
-      </div>
-      <div class="itemx">
-        <h3 class="tarefehs">
-۵۴۰۰۰
-        </h3>
-      </div>
-      <div class="itemz">
-<i class="fas fa-check"></i>
-      </div>
-      <div class="itemx">
-        <h3 class="tarefehs">
-۴۰ + ۲۰ شبانه
-        </h3>
-      </div>
-      <div class="itemx">
-
-        <h3 class="tarefehs">
-۹۰۰۰۰
-        </h3>
-      </div>
-      <div class="itemz">
-<i class="fas fa-check"></i>
-      </div>
-      <div class="itemx">
-        <h3 class="tarefehs">
-۷۰ + ۳۵ شبانه
-        </h3>
-      </div>
-      <div class="itemx">
-        <h3 class="tarefehs">
-۱۳۲۰۰۰
-        </h3>
-      </div>
-      <div class="itemz">
-<i class="fas fa-check"></i>
-      </div>
-      <div class="itemx">
-
-        <h3 class="tarefehs">
-۱۰۰ + ۵۰ شبانه
-        </h3>
-      </div>
-      <div class="itemx">
-        <h3 class="tarefehs">
-۱۸۰۰۰۰
-        </h3>
-      </div>
-    </div><!--containertarefe yek mahe-->
+      <div class="" id="WirelessContent"></div>
 
 
 

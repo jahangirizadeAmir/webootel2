@@ -5,8 +5,6 @@ include "inc/header.php";
 ?>
     <div class="slideshowContainer"><!--slideshow Container is he here!-->
       <div class="Bildoj"><!--First part of the container-->
-
-
           <?php
           $i=1;
           $select = $db::Query("SELECT * FROM slider ORDER BY date(sliderDate) DESC ,time(sliderTime) DESC ");
@@ -26,7 +24,6 @@ include "inc/header.php";
 
           <?php
               $i++;
-
           }
           ?>
 
