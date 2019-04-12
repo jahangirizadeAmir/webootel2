@@ -3,10 +3,7 @@ include "inc/header.php";
 ?>
 
 
-    <style>
-        #mapid { height: 280px; }
 
-    </style>
 
 <div class="registerHNNBack">
   <div class="registerHNN">
@@ -184,7 +181,7 @@ include "inc/header.php";
     <input type="text" id="lat" style="display: none">
     <input type="text" id="lng" style="display: none">
 
-    <div id="mapid"></div>
+    <div id="mapid" style="height: 280px;"> </div>
 
 
   </div>
