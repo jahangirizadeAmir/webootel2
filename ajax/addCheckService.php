@@ -36,6 +36,7 @@ if(
                                              '$postalCode','$serviceModel','$lat','$lng',
                                              '$date','$time','',''
                                             )");
+
     if($Q){
         $call=array("error"=>false);
         echo json_encode($call);
