@@ -7,7 +7,7 @@
  */
 include "../class/dataBase.php";
 $db = new dataBase();
-$arrayIsset = ("number");
+$arrayIsset = array("number");
 if(
     $db::issetParams($_POST,$arrayIsset)
     &&
