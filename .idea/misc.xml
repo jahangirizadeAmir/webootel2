@@ -3,7 +3,10 @@
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
   </component>
+<<<<<<< HEAD
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
+=======
+>>>>>>> c0c5f643ddd48cbd8a41a689582ad78a7194b661
 </project>
