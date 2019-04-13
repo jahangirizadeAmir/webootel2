@@ -106,6 +106,7 @@ include "inc/header.php";
     <button type="button" class="btn" id="btnbtn" onclick="showOne2()"><b>پوشش وایرلس</b></button>
     </div>
 
+
 <!------------------------------------------------------------------------------------------------>
 
 
