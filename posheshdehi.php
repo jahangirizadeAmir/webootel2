@@ -17,8 +17,6 @@ include "inc/header.php";
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="font awesome/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -98,7 +96,7 @@ include "inc/header.php";
 
 </style>
 <!--بادی---------------------------------------------------------------------------------------------------------->
-<div class="col-sm-12 col-xs-12 col-lg-12 col-md-12">
+<div class="col-sm-12 col-xs-12 col-lg-12 col-md-12" style="padding: 50px">
 
     <div style="text-align: center;" class="col-md-6 col-md-offset-3  col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3 col-lg-6 col-lg-offset-3">
     <button type="button" class="btn" id="btnbtn" onclick="showOne()"><b>پوشش TD-LTE</b></button>
@@ -130,22 +128,24 @@ include "inc/header.php";
         <p class="para"><b>قسمت های بنفش بیانگر پوشش خدمات TD_LTE وبوتل است.</b></p>
         <br>
 
-        <button type="button" class="buttton dropdown-toggle" data-toggle="dropdown" value="انتخاب استان">انتخاب استان<span class="caret"></span></button>
-        <ul class="dropdown-menu">
-            <li><a href="#">خوزستان</a></li>
-            <li><a href="#">تهران</a></li>
-            <li><a href="#">اصقهان</a></li>
-            <li><a href="#">فارس</a></li>
-            <li><a href="#">بوشهر</a></li>
-        </ul>
-        <button type="button" class="buttton dropdown-toggle" data-toggle="dropdown" value="انتخاب شهر">انتخاب شهر<span class="caret"></span></button>
-        <ul class="dropdown-menu">
-            <li><a href="#">اهواز</a></li>
-            <li><a href="#">تهران</a></li>
-            <li><a href="#">اصقهان</a></li>
-            <li><a href="#">شیراز</a></li>
-            <li><a href="#">مشهد</a></li>
-        </ul>
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+            </ul>
+        </div>
         <br>
         <br>
         <img src="Images/LTE.png" class="img">

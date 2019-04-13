@@ -79,7 +79,7 @@ include "inc/header.php";
         <h2 class="ItemHeader">بررسی پوشش خدمات</h2>
         <p class="ItemText">بررسی شرایط پوشش در محل سکونت و کار شما</p>
       </div>
-      <a href="#" class="ItemLink">بررسی پوشش</a>
+      <a href="posheshdehi.php" class="ItemLink">بررسی پوشش</a>
     </div>
   </div>
 
