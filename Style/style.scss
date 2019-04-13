@@ -1640,14 +1640,14 @@ $range-label-width: 60px !default;
 }
 
 .range-slider__range {
-  -webkit-appearance: none;
-  width: calc(100% - (#{$range-label-width + 60px}));
-  height: $range-track-height;
-  border-radius: 5px;
-  background: $range-track-color;
-  outline: none;
-  padding: 0;
-  margin: 0;
+  -webkit-appearance: none!important;
+  width: calc(100% - (#{$range-label-width + 60px}))!important;
+  height: $range-track-height!important;
+  border-radius: 5px!important;
+  background: $range-track-color!important;
+  outline: none!important;
+  padding: 0!important;
+  margin: 0!important;
 
   // Range Handle
   &::-webkit-slider-thumb {
