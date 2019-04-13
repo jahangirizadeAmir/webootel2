@@ -19,18 +19,21 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml"><!--Icons-->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="Style/bootstrap.css">
+    <link rel="stylesheet" href="Style/slick.css">
+    <link rel="stylesheet" href="Style/slick-theme.css">
+
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
-<body class="mainPage">
+<body class="mainPage" style="width: 100%">
 <div class="sidebar"><!--sidebar menu-->
     <div class="">
         <a href="#" class="fas fa-times fermbutono" id="fermbutono"></a>
     </div>
     <a href="index.php" class="sidebarlinks">صفحه نخست</a>
     <a href="WhyWebotel.php" class="sidebarlinks">چرا وبوتل</a>
-    <a href="#" class="sidebarlinks">پشتیبانی</a>
+    <a href="contactUs.php" class="sidebarlinks">پشتیبانی</a>
     <a href="#" class="sidebarlinks">وبلاگ</a>
     <a href="aboutUs.php" class="sidebarlinks">درباره‌ی وبوتل</a>
 </div><!--sidebar menu-->
@@ -39,7 +42,7 @@
         <a href="#"><img src="Images/Logo.svg" alt="Logo" class="logo"></a>
         <a href="index.php" class="linksHeader">صفحه نخست</a>
         <a href="WhyWebotel.php" class="linksHeader">چرا وبوتل</a>
-        <a href="#" class="linksHeader">پشتیبانی</a>
+        <a href="contactUs.php" class="linksHeader">پشتیبانی</a>
         <a href="#" class="linksHeader">وبلاگ</a>
         <a href="aboutUs.php" class="linksHeader">درباره‌ی وبوتل</a>
         <div class="menuIcon">

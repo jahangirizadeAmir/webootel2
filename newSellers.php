@@ -18,7 +18,7 @@
       </div>
       <a href="index.php" class="sidebarlinks">صفحه نخست</a>
       <a href="WhyWebotel.php" class="sidebarlinks">چرا وبوتل</a>
-      <a href="#" class="sidebarlinks">پشتیبانی</a>
+      <a href="contactUs.php" class="sidebarlinks">پشتیبانی</a>
       <a href="#" class="sidebarlinks">وبلاگ</a>
       <a href="aboutUs.php" class="sidebarlinks">درباره‌ی وبوتل</a>
     </div><!--sidebar menu-->
@@ -27,7 +27,7 @@
         <a href="#"><img src="Images/Logo.svg" alt="Logo" class="logo"></a>
         <a href="index.php" class="linksHeader">صفحه نخست</a>
         <a href="WhyWebotel.php" class="linksHeader">چرا وبوتل</a>
-        <a href="#" class="linksHeader">پشتیبانی</a>
+        <a href="contactUs.php" class="linksHeader">پشتیبانی</a>
         <a href="#" class="linksHeader">وبلاگ</a>
         <a href="aboutUs.php" class="linksHeader">درباره‌ی وبوتل</a>
         <div class="menuIcon">
