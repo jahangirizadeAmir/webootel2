@@ -1,0 +1,243 @@
+body{
+    direction: rtl;
+
+}
+
+
+
+@font-face{
+    font-family: "iranSans";
+    src: url("../font/iranSans.ttf");
+}
+@font-face {
+    font-family: "iranSansBlack";
+    src: url("../font/iranSans_Black.ttf");
+}
+@font-face {
+    font-family: "iranSansBold";
+    src: url("../font/iranSans_bold.ttf");
+}
+@font-face {
+    font-family: "iranSansLight";
+    src: url("../font/iranSans_Light.ttf");
+}
+@font-face {
+    font-family: "iranSansMedium";
+    src: url("../font/iranSans_Medium.ttf");
+}
+@font-face {
+    font-family: "iranSansUltraLight";
+    src: url("../font/iranSans_UltraLight.ttf");
+}
+*{
+    font-family: iranSans,sans-serif;
+    text-align: right;
+
+}
+.nav @font-face{
+    font-family: iranSans, serif ;
+    src: url("../font/iranSans.ttf");
+}
+.navbar-header{
+    float: right !important;
+}
+.navbar{
+    border-radius: 0;
+}
+.navbar-inverse{
+    background-color: #742a9d !important;
+    border-color: transparent;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #ffffff !important;
+}
+.fa{
+    margin-left: 5px;
+    font-size: 18px;
+}
+.logo{
+    width: 111px;
+    height: 78px !important;
+}
+.nav{
+    margin-top: 12px !important;
+    font-size: 16px;
+}
+.log{
+    font-size: 14px;
+}
+.phone{
+    margin-left: 40px;
+    border-radius: inherit;
+}
+
+
+.col-sm-3{
+    width: 100%;
+}
+.col-md-9{
+    margin-top:0 ;
+}
+ol, ul{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.h1, .h2, .h3, h1, h2, h3{
+    margin-top: 120px;
+    margin-bottom:50px;
+}
+.pcolor {
+    color: #742a9d;
+}
+.image{
+    float: right;
+}
+.text{
+    float: left;
+}
+.h11{
+    border-bottom:3px solid #742a9d;
+    color: #742a9d;
+    position: absolute;
+    padding-top: 0;
+    padding-bottom: 8px;
+}
+.border{
+    border-top-style: solid;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+    border-radius: 0;
+    border-width: medium;
+    border-color: rgba(198, 198, 198, 0.2);
+    margin-top: 80px;
+}
+#footer{
+    width: 1300px;
+    margin-bottom: 200px;
+    float: right !important;
+    margin-right: -765px;
+    margin-top: -50px;
+}
+.margin{
+    margin-left: -650px;
+}
+.namad{
+    margin-top: 180px;
+    margin-left: -850px;
+}
+.enamad{
+    width: 200px;
+    height: 200px;
+
+}
+.titi{
+    margin-left: -1200px;
+    margin-top: 120px;
+    font-size: large;
+}
+.tweeter{
+    width: 58px;
+    margin-left: 5px;
+}
+.insta{
+    width: 60px;
+    margin-right: 66px;
+    margin-top: -58px;
+}
+.telegram{
+    width: 63px;
+    margin-right: 131px;
+    margin-top: -65px;
+}
+.in{
+    width: 63px;
+    margin-right: 196px;
+    margin-top: -63px;
+}
+.samane{
+    width: 100px;
+    height: 100px;
+    margin-top: -23px;
+}
+.p{
+    margin-left: -53px;
+    margin-top: -20px;
+}
+.logo{
+    width: 113px;
+    height: 88px;
+    margin-right: 0;
+
+}
+.ltext{
+    text-align: right;
+    margin-top: -197px;
+    margin-left: 265px;
+    font-size: 17px;
+}
+
+
+
+
+
+
+
+
+
+
+.ppp{
+     width:100%;
+     background-color: white!important;
+     text-align: center;
+     box-shadow: 0 1px 10px silver;
+     margin-top: 120px;
+     color: #122b40;
+ }
+.ppp:hover{
+    background-color: #742a9d !important;
+    color: white;
+}
+.button{
+    background-color: #742a9d;
+    border: none;
+    padding: 10px;
+    width: 120px;
+    color: white;
+    text-align: center;
+}
+.num{
+    padding:9px;
+    width: 300px;
+}
+.numb{
+    padding:9px;
+    width: 100px;
+}
+.para{
+    color: #122b40;
+    font-size: 17px;
+    text-align: center;
+    margin-top: 40px !important;
+}
+.btn1{
+    background-color: #742a9d;
+    color: white;
+    border-radius: 25px;
+    padding: 10px;
+    width: 180px;
+    text-align: center;
+
+ }
+.img{
+    width: 90%;
+    height: 300px;
+    border: 1px solid silver;
+    box-shadow: 0 1px 10px silver;
+}
+.img2{
+    width: 83%;
+    height: 283px;
+    border: 1px solid silver;
+    box-shadow: 0 1px 10px silver;
+}
