@@ -128,24 +128,7 @@ include "inc/header.php";
         <p class="para"><b>قسمت های بنفش بیانگر پوشش خدمات TD_LTE وبوتل است.</b></p>
         <br>
 
-        <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-                <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-                <li><a href="#">HTML</a></li>
-                <li><a href="#">CSS</a></li>
-                <li><a href="#">JavaScript</a></li>
-            </ul>
-        </div>
-        <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-                <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-                <li><a href="#">HTML</a></li>
-                <li><a href="#">CSS</a></li>
-                <li><a href="#">JavaScript</a></li>
-            </ul>
-        </div>
+
         <br>
         <br>
         <img src="Images/LTE.png" class="img">
@@ -158,16 +141,16 @@ include "inc/header.php";
     <div class="collapse" id="three">
         <p class="para"><b>شما میتوانید جهت اطلاع از پوشش خدمات وایرلس در منطقه ی خود از نقشه زیر استفاده کنید.</b></p>
         <p class="para"><b>قسمت های بنفش بیانگر پوشش خدمات وایرلس وبوتل است.</b></p>
-        <div class="wireless">
-            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" value="انتخاب شهر">انتخاب شهر<span class="caret"></span></button>
-            <ul class="dropdown-menu">
-                <li><a href="#">اهواز</a></li>
-                <li><a href="#">تهران</a></li>
-                <li><a href="#">اصقهان</a></li>
-                <li><a href="#">شیراز</a></li>
-                <li><a href="#">مشهد</a></li>
-            </ul>
-    </div>
+<!--        <div class="wireless">-->
+<!--            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" value="انتخاب شهر">انتخاب شهر<span class="caret"></span></button>-->
+<!--            <ul class="dropdown-menu">-->
+<!--                <li><a href="#">اهواز</a></li>-->
+<!--                <li><a href="#">تهران</a></li>-->
+<!--                <li><a href="#">اصقهان</a></li>-->
+<!--                <li><a href="#">شیراز</a></li>-->
+<!--                <li><a href="#">مشهد</a></li>-->
+<!--            </ul>-->
+<!--    </div>-->
     </div>
 
 </div>
