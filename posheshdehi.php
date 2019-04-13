@@ -92,6 +92,8 @@ include "inc/header.php";
     .img{
         width: 750px;
         height: 400px;
+        float: none;
+        margin: auto;
     }
 
 </style>
@@ -131,13 +133,9 @@ include "inc/header.php";
 
         <br>
         <br>
-        <img src="Images/LTE.png" class="img">
-
+        <div id="mapid1" class="img"> </div>
     </div>
-
-<!-- ----------------------------------------------------------------------------------------------   -->
-
-
+<!------------------------------------------------------------------------------------------------   -->
     <div class="collapse" id="three">
         <p class="para"><b>شما میتوانید جهت اطلاع از پوشش خدمات وایرلس در منطقه ی خود از نقشه زیر استفاده کنید.</b></p>
         <p class="para"><b>قسمت های بنفش بیانگر پوشش خدمات وایرلس وبوتل است.</b></p>
@@ -151,8 +149,8 @@ include "inc/header.php";
 <!--                <li><a href="#">مشهد</a></li>-->
 <!--            </ul>-->
 <!--    </div>-->
+        <div id="mapid" class="img"> </div>
     </div>
-
 </div>
 
 
@@ -265,8 +263,38 @@ include "inc/header.php";
 <script>
     function showOne() {
         $("#one").hide();
-        $("#two").hide();
-        $("#three").show();
+        $("#two").show();
+        $("#three").hide();
+
+        mymap = L.map('mapid1').setView([31.320286, 48.670124], 12);
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFoYW5naXJpemFkZWFtaXIiLCJhIjoiY2p1Y211YTRpMGRweTRkcDlsNzI5eXhkdSJ9.CF_84BFn2FS-2aIHdL1wVA', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox.streets',
+            accessToken: 'your.mapbox.access.token'
+        }).addTo(mymap);
+        var polygon = L.polygon([
+            [31.344878, 48.677625],
+            [31.361920, 48.679851],
+            [31.351677, 48.695168],
+            [31.338267, 48.684797]
+        ],{
+            color: '#a552a2',
+            fillColor: '#a552a2',
+            fillOpacity: 0.5,
+            radius: 500
+        }).addTo(mymap);
+        var polygon2 = L.polygon([
+            [31.359402, 48.707660],
+            [31.365814, 48.717961],
+            [31.353787, 48.730488],
+            [31.349918, 48.719538]
+        ],{
+            color: '#a552a2',
+            fillColor: '#a552a2',
+            fillOpacity: 0.5,
+            radius: 500
+        }).addTo(mymap);
 
     }function showOne1() {
         $("#one").show();
@@ -275,8 +303,26 @@ include "inc/header.php";
 
     }function showOne2() {
         $("#one").hide();
-        $("#two").show();
-        $("#three").hide();
+        $("#two").hide();
+        $("#three").show();
+        mymap = L.map('mapid').setView([31.320286, 48.670124], 12);
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFoYW5naXJpemFkZWFtaXIiLCJhIjoiY2p1Y211YTRpMGRweTRkcDlsNzI5eXhkdSJ9.CF_84BFn2FS-2aIHdL1wVA', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox.streets',
+            accessToken: 'your.mapbox.access.token'
+        }).addTo(mymap);
+        var polygon = L.polygon([
+            [31.359402, 48.707660],
+            [31.365814, 48.717961],
+            [31.353787, 48.730488],
+            [31.349918, 48.719538]
+        ],{
+            color: '#a552a2',
+            fillColor: '#a552a2',
+            fillOpacity: 0.5,
+            radius: 500
+        }).addTo(mymap);
 
     }
 </script>

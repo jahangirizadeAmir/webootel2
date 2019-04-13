@@ -53,7 +53,7 @@ include "inc/header.php";
         <h2 class="ItemHeader">طرح‌ها و تعرفه‌ها</h2>
         <p class="ItemText">هزینه‌ها و شرایط تهییه بسته‌های اینترنتی ثابت و وایرلس</p>
       </div>
-      <a href="#" class="ItemLink">دیدن بسته‌ها</a>
+      <a href="Costs.php" class="ItemLink">دیدن بسته‌ها</a>
     </div>
   </div>
 
@@ -64,7 +64,7 @@ include "inc/header.php";
         <h2 class="ItemHeader">سفارش آنلاین خدمات</h2>
         <p class="ItemText">همین الان سرویس مورد نیاز خود را به سادگی سفارش دهید</p>
       </div>
-      <a href="#" class="ItemLink">سفارش بسته‌ها</a>
+      <a href="newCostumers1.php" class="ItemLink">سفارش بسته‌ها</a>
     </div>
   </div>
 

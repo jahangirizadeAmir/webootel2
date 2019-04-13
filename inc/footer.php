@@ -30,10 +30,10 @@
                 <h4 class="footertekstujoHead">
                     آشنایی با وبوتل
                 </h4>
-                <a href="#" class="footertekstujolinks">
+                <a href="aboutUs.php" class="footertekstujolinks">
                     درباره ما
                 </a>
-                <a href="#" class="footertekstujolinks">
+                <a href="WhyWebotel.php" class="footertekstujolinks">
                     چرا وبوتل؟
                 </a>
                 <a href="#" class="footertekstujolinks">
@@ -56,7 +56,7 @@
                 <a href="#" class="footertekstujolinks">
                     سوالات متداول (FAQ)
                 </a>
-                <a href="#" class="footertekstujolinks">
+                <a href="posheshdehi.php" class="footertekstujolinks">
                     نواحی تحت پوشش
                 </a>
                 <a href="#" class="footertekstujolinks">
