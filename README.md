@@ -1,16 +1,4 @@
-# webootel2
-asdasd
-asdasdvava
-av
-avas
-va
-svas
-va
-sva
-svas
-v
-sav
-as
-v
-asv
-asv
+# webotel
+a persian webSite for sell intern account
+ we programming this webSite whit native native php
+ 
