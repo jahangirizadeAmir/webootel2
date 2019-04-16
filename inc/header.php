@@ -34,7 +34,7 @@
     <a href="index.php" class="sidebarlinks">صفحه نخست</a>
     <a href="WhyWebotel.php" class="sidebarlinks">چرا وبوتل</a>
     <a href="contactUs.php" class="sidebarlinks">پشتیبانی</a>
-    <a href="#" class="sidebarlinks">وبلاگ</a>
+    <a href="weblog.php" class="sidebarlinks">وبلاگ</a>
     <a href="aboutUs.php" class="sidebarlinks">درباره‌ی وبوتل</a>
 </div><!--sidebar menu-->
 <div class="header"><!--header in desktop view-->
@@ -43,7 +43,7 @@
         <a href="index.php" class="linksHeader">صفحه نخست</a>
         <a href="WhyWebotel.php" class="linksHeader">چرا وبوتل</a>
         <a href="contactUs.php" class="linksHeader">پشتیبانی</a>
-        <a href="#" class="linksHeader">وبلاگ</a>
+        <a href="weblog.php" class="linksHeader">وبلاگ</a>
         <a href="aboutUs.php" class="linksHeader">درباره‌ی وبوتل</a>
         <div class="menuIcon">
             <a href="#" class="fas fa-bars MIcon" id="menubutono"></a>
