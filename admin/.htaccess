@@ -1,0 +1,4 @@
+AuthGroupFile /dev/null
+AuthUserFile /home2/kel611/domains/kelidaval.ir/.htpasswd/public_html/admin/.htpasswd
+AuthName "admin"
+ErrorDocument 401 "Unauthorized Access"
