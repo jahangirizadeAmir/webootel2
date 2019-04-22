@@ -27,10 +27,10 @@
                                 $selectListAdmin = mysqli_query($conn,"SELECT * FROM post");
                                 while ($rowAdmin = mysqli_fetch_assoc($selectListAdmin)){
                                     $lastPostId = $rowAdmin['postParent'];
-                                    $selectMenuName = mysqli_query($conn,"SELECT * FROM collection WHERE collectionId = '$lastPostId'");
+                                    $selectMenuName = mysqli_query($conn,"SELECT * FROM cat WHERE catId = '$lastPostId'");
                                     if(mysqli_num_rows($selectMenuName)==1) {
                                         $rowMenuParent = mysqli_fetch_assoc($selectMenuName);
-                                        $parentName = $rowMenuParent['collectionName'];
+                                        $parentName = $rowMenuParent['catName'];
                                     }else{
                                         $parentName = 'پست اصلی';
                                     }

@@ -3,9 +3,7 @@ include 'inc/inc.php';
 ?>
       <section id="main-content">
           <section class="wrapper">
-              <?php
-              if($_SESSION['level']=='1'){
-                  ?>
+
               <div class="row state-overview">
                   <div class="col-lg-4 col-sm-6">
                       <section class="panel">
@@ -14,10 +12,10 @@ include 'inc/inc.php';
                           </div>
                           <div class="value">
                               <h1><?php
-                                  $selectUser = mysqli_query($conn,"SELECT * FROM user");
+                                  $selectUser = mysqli_query($conn,"SELECT * FROM checkservice where checkservice.serviceOk!='1'");
                                   echo mysqli_num_rows($selectUser);
                                   ?></h1>
-                              <p>کاربر جدید</p>
+                              <p>تعداد در خواست های جدید</p>
                           </div>
                       </section>
                   </div>
@@ -28,10 +26,10 @@ include 'inc/inc.php';
                           </div>
                           <div class="value">
                               <h1><?php
-                                  $selectUser = mysqli_query($conn,"SELECT * FROM admin WHERE adminlevel='0'");
+                                  $selectUser = mysqli_query($conn,"SELECT * FROM seller");
                                   echo mysqli_num_rows($selectUser);
                                   ?></h1>
-                              <p>مشاورین املاک</p>
+                              <p>تعداد درخواست عاملین فروش</p>
                           </div>
                       </section>
                   </div>
@@ -42,86 +40,15 @@ include 'inc/inc.php';
                           </div>
                           <div class="value">
                               <h1><?php
-                                  $selectUser = mysqli_query($conn,"SELECT * FROM estate");
+                                  $selectUser = mysqli_query($conn,"SELECT * FROM checkservice WHERE serviceOk='0' OR serviceOk=''");
                                   echo mysqli_num_rows($selectUser);
                                   ?>
                               </h1>
-                              <p>تعداد کل املاک</p>
+                              <p>تعداد درخواست های تایید شده</p>
                           </div>
                       </section>
                   </div>
-
               </div>
-              <div class="row">
-                  <div class="col-lg-12">
-                      <!--timeline start-->
-                      <section class="panel">
-
-              <?php
-}
-if($_SESSION['level']=='0'){
-    $adminId = mysqli_real_escape_string($conn, $_SESSION['id']);
-
-    $selectAdmin = mysqli_query($conn,"SELECT * FROM admin WHERE adminAdminId = '$adminId'");
-    while ($rowAdmin = mysqli_fetch_assoc($selectAdmin)){
-        $level2AdminId = $rowAdmin['adminId'];
-        ?>
-
-        <div class="col-lg-4">
-            <!--widget start-->
-            <aside class="profile-nav alt green-border">
-                <section class="panel">
-                    <div class="user-heading alt green-bg">
-                        <a href="#">
-                            <img alt="" src="img/upload/<?php echo $rowAdmin['adminImage'] ?>.jpg">
-                        </a>
-                        <h1><?php echo $rowAdmin['adminName'].' '.$rowAdmin['adminLastName'] ?></h1>
-                        <p><?php
-                            if($rowAdmin['adminLoginTime']!='') {
-
-                                echo jalali($rowAdmin['adminLoginDate']).'-'.$rowAdmin['adminLoginTime'];
-                            }else{
-                                echo 'نامشخص';
-                            }
-                            ?></p>
-                    </div>
-                    <?php
-                    $selectAdminLaster = mysqli_query($conn,"SELECT * FROM estate WHERE estate_transaction='3' AND estate_oner='$level2AdminId'");
-                    $modal = mysqli_num_rows($selectAdminLaster);
-
-                    $selectAdminLaster1 = mysqli_query($conn,"SELECT * FROM estate WHERE estate_transaction='4' AND estate_oner='$level2AdminId'");
-                    $modal2 = mysqli_num_rows($selectAdminLaster1);
-                    ?>
-
-                    <ul class="nav nav-pills nav-stacked">
-                        <li style="    padding: 10px;"><i class="icon-building"></i> رهن / اجاره <span class="label label-primary pull-left r-activity"><?php
-                        echo $modal
-                                ?></span></li>
-                        <li style="    padding: 10px;"><i class=" icon-home"></i> فروش <span class="label label-info pull-left r-activity"><?php
-                        echo $modal2
-                                ?></span></li>
-                    </ul>
-
-                </section>
-            </aside>
-            <!--widget end-->
-            <!--widget start-->
-
-            <!--widget end-->
-        </div>
-
-        <?php
-    }
-                  ?>
-
-          </section>
-                  </div>
-              </div>
-              <?php
-}
-?>
-
-
               <div class="row">
                   <div class="col-lg-12">
                       <!--work progress start-->

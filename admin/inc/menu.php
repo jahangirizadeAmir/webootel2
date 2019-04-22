@@ -16,10 +16,7 @@
                     <span>صفحه اصلی</span>
                 </a>
             </li>
-            <?php
-            if($_SESSION['level']=='1' || $_SESSION['level']=='0') {
-                if($_SESSION['level']=='1' || $_SESSION['level']=='0') {
-                    ?>
+
                     <li class="sub-menu">
                         <a href="javascript:;" class="">
                             <i class="icon-book"></i>
@@ -31,20 +28,18 @@
                             <li><a class="" href="admin_list.php">لیست مدیران</a></li>
                         </ul>
                     </li>
-                    <?php
-                }if($_SESSION['level']=='1') {
-                    ?>
-                    <li class="sub-menu">
-                        <a href="javascript:;" class="">
-                            <i class="icon-book"></i>
-                            <span>تیم متخصص</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub">
-                            <li><a class="" href="add_ourTeam.php">اضافه کردن</a></li>
-                            <li><a class="" href="ourTeamList.php">لیست مدیران</a></li>
-                        </ul>
-                    </li>
+
+<!--                    <li class="sub-menu">-->
+<!--                        <a href="javascript:;" class="">-->
+<!--                            <i class="icon-book"></i>-->
+<!--                            <span>تیم متخصص</span>-->
+<!--                            <span class="arrow"></span>-->
+<!--                        </a>-->
+<!--                        <ul class="sub">-->
+<!--                            <li><a class="" href="add_ourTeam.php">اضافه کردن</a></li>-->
+<!--                            <li><a class="" href="ourTeamList.php">لیست مدیران</a></li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
                     <!--                <li class="sub-menu">-->
                     <!--                    <a href="javascript:;" class="">-->
                     <!--                        <i class="icon-ellipsis-vertical"></i>-->
@@ -109,12 +104,7 @@
                             <span>اضافه کردن اسلایدر</span>
                         </a>
                     </li>
-                    <?php
-                }
-            }
-            if($_SESSION['level']!='6') {
-                if($_SESSION['level']!='1') {
-                    ?>
+
                     <li class="sub-menu">
                         <a href="javascript:;" class="">
                             <i class="icon-home"></i>
@@ -143,10 +133,7 @@
                             <li><a class="" href="contactList.php">لیست تلفن</a></li>
                         </ul>
                     </li>
-                    <?php
-                }
-            }else{
-                ?>
+
                 <li class="sub-menu">
                     <a href="javascript:;" class="">
                         <i class="icon-edit"></i>
@@ -158,9 +145,6 @@
                         <li><a class="" href="post_list.php">لیست مطالب</a></li>
                     </ul>
                 </li>
-            <?php
-            }
-            ?>
 
 <!--            <li class="sub-menu">-->
 <!--                <a href="javascript:;" class="">-->

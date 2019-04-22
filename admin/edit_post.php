@@ -53,15 +53,15 @@ if(isset($_GET['id']) && $_GET['id']!='') {
                                                 <select class="form-control input-lg m-bot4" id="parent">
                                                     <option value="" selected>دسته اصلی</option>
                                                     <?php
-                                                    $selectAdminJobsSet = mysqli_query($conn, "SELECT * FROM collection");
+                                                    $selectAdminJobsSet = mysqli_query($conn, "SELECT * FROM cat");
                                                     while ($rowAdminSet = mysqli_fetch_assoc($selectAdminJobsSet)) {
-                                                        if($rowAdminSet['collectionId'] == $rowPost['postParent']){
+                                                        if($rowAdminSet['catId'] == $rowPost['postParent']){
                                                             $active = 'selected';
                                                         }else{
                                                             $active = '';
                                                         }
                                                         echo '
-                                                     <option value="' . $rowAdminSet['collectionId'] . '" '.$active.'>' . $rowAdminSet['collectionName'] . '</option>';
+                                                     <option value="' . $rowAdminSet['catId'] . '" '.$active.'>' . $rowAdminSet['catName'] . '</option>';
                                                     }
                                                     ?>
                                                 </select></div>
@@ -211,6 +211,33 @@ if(isset($_GET['id']) && $_GET['id']!='') {
                                                 </section>
                                             </div>
                                         </div>
+<div class="row">
+                                            <div class="col-lg-12">
+                                                <section class="panel">
+                                                    <header class="panel-heading">
+                                                        متن کوچک
+
+                                                    </header>
+                                                    <div class="panel-body">
+                                                        <div class="form">
+                                                            <form action="#" class="form-horizontal">
+                                                                <div class="form-group">
+                                                                    <div class="col-sm-10">
+                                                                    <textarea class="form-control ckeditor"
+                                                                              name="Detail2" id="Detail2"
+                                                                              rows="6">
+                                                                        <?php
+                                                                        echo $rowPost['postُShortText'];
+                                                                        ?>
+                                                                    </textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
 
 
 
@@ -331,12 +358,13 @@ if(isset($_GET['id']) && $_GET['id']!='') {
             function submit_post() {
                 border_defult();
                 var y = 0;
-                var title, name, parent, detail, detailRight, detailLeft;
+                var title, name, parent, detail,detail2, detailRight, detailLeft;
                 var id = '<?php echo $postId ?>';
                 title = $('#title').val();
                 name = $('#name').val();
                 parent = $('#parent option:selected').val();
                 detail = CKEDITOR.instances["Detail"].getData();
+                detail2 = CKEDITOR.instances["Detail2"].getData();
                 var img = localStorage.getItem('imgSet');
 
                 if (name === '') {
@@ -360,6 +388,7 @@ if(isset($_GET['id']) && $_GET['id']!='') {
                             name: name,
                             parent: parent,
                             detail: detail,
+                            detail2: detail2,
                             img: img,
                             id: id
                         },

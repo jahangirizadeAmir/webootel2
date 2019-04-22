@@ -22,7 +22,8 @@ if (isset($_SESSION['loginAdmin']) && $_SESSION['loginAdmin'] == true) {
             isset($_POST['title']) && $_POST['title'] != '' &&
             isset($_POST['name']) && $_POST['name'] != '' &&
             isset($_POST['parent']) &&
-            isset($_POST['detail']) && $_POST['detail'] != ''
+            isset($_POST['detail']) && $_POST['detail'] != '' &&
+            isset($_POST['detail2']) && $_POST['detail2'] != ''
         ) {
 
 
@@ -39,6 +40,7 @@ if (isset($_SESSION['loginAdmin']) && $_SESSION['loginAdmin'] == true) {
             $name = mysqli_real_escape_string($conn, $_POST['name']);
             $parent = mysqli_real_escape_string($conn, $_POST['parent']);
             $detail = mysqli_real_escape_string($conn, $_POST['detail']);
+            $detail2 = mysqli_real_escape_string($conn, $_POST['detail2']);
             $detailRight = '';
             $detailLeft = '';
 
@@ -58,11 +60,11 @@ if (isset($_SESSION['loginAdmin']) && $_SESSION['loginAdmin'] == true) {
          postText, postTitle, postParent,
          postRegDate,
          postRegTime, postAdminId,
-         postWidth, postRight, postLeft
+         postWidth, postRight, postLeft,postShortText
          ) VALUES
           ('$postId','$name','$img','$detail',
           '$title','$parent','$date','$time','$adminId',
-          '$width','$detailRight','$detailLeft')");
+          '$width','$detailRight','$detailLeft','$detail2')");
             if ($insertIntoAdmin) {
                 $call = array('error' => false);
                 echo json_encode($call);

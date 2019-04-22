@@ -16,7 +16,6 @@ include 'inc/inc.php';
                         <thead>
                         <tr>
                             <th>نام و نام خانوادگی</th>
-                            <th class="hidden-phone">نام مشاور املاک</th>
                             <th class="hidden-phone">پست الکترونیکی</th>
                             <th class="hidden-phone">موبایل</th>
                             <th class="hidden-phone">عملیات</th>
@@ -27,19 +26,14 @@ include 'inc/inc.php';
                         <?php
                         $cot = "'";
                         $adminId = mysqli_real_escape_string($conn, $_SESSION['id']);
-                        if($_SESSION['level']=='1') {
                             $selectListAdmin = mysqli_query($conn, "SELECT * FROM admin WHERE adminId!='$adminId'");
                             while ($rowAdmin = mysqli_fetch_assoc($selectListAdmin)) {
-                                if ($rowAdmin['adminlevel'] != '3') {
                                     $btn = '<button class="btn btn-danger" onclick="deactive(' . $cot . $rowAdmin['adminId'] . $cot . ')">غیر فعال</button>';
-                                } else {
                                     $btn = '<button class="btn btn-info" onclick="deactive(' . $cot . $rowAdmin['adminId'] . $cot . ')">فعال سازی</button>';
-                                }
 
                                 echo '                                   
                                         <tr class="odd gradeX"  style="cursor: pointer">
                                             <td onclick="goto_profleAdmin(' . $cot . $rowAdmin['adminId'] . $cot . ')">' . $rowAdmin['adminName'] . ' ' . $rowAdmin['adminLastName'] . '</td>
-                                            <td class="hidden-phone">' . $rowAdmin['adminOccupation'] . '</td>
                                             <td class="hidden-phone">' . $rowAdmin['adminEmail'] . '</td>
                                             <td class="center hidden-phone">' . $rowAdmin['adminMobile'] . '</td>
                                             <td class="center hidden-phone">
@@ -48,32 +42,8 @@ include 'inc/inc.php';
                                            </td>
                                         </tr>
                                      ';
-                            }
-                        }
-                        if($_SESSION['level']=='0'){
-                            $selectListAdmin = mysqli_query($conn, "SELECT * FROM admin WHERE adminId!='$adminId' AND adminAdminId='$adminId'");
-                            while ($rowAdmin = mysqli_fetch_assoc($selectListAdmin)) {
-                                if ($rowAdmin['adminlevel'] != '3') {
-                                    $btn = '<button class="btn btn-danger" onclick="deactive(' . $cot . $rowAdmin['adminId'] . $cot . ')">غیر فعال</button>';
-                                } else {
-                                    $btn = '<button class="btn btn-info" onclick="deactive(' . $cot . $rowAdmin['adminId'] . $cot . ')">فعال سازی</button>';
-                                }
+                        }?>
 
-                                echo '                                   
-                                        <tr class="odd gradeX"  style="cursor: pointer">
-                                            <td onclick="goto_profleAdmin(' . $cot . $rowAdmin['adminId'] . $cot . ')">' . $rowAdmin['adminName'] . ' ' . $rowAdmin['adminLastName'] . '</td>
-                                            <td class="hidden-phone">' . $rowAdmin['adminOccupation'] . '</td>
-                                            <td class="hidden-phone">' . $rowAdmin['adminEmail'] . '</td>
-                                            <td class="center hidden-phone">' . $rowAdmin['adminMobile'] . '</td>
-                                            <td class="center hidden-phone">
-                                            ' . $btn . '
-
-                                           </td>
-                                        </tr>
-                                     ';
-                            }
-                        }
-                        ?>
 
 
                         </tbody>

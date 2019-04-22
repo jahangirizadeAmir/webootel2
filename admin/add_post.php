@@ -34,10 +34,10 @@ include 'inc/inc.php';
                                                         <select class="form-control input-lg m-bot4" id="parent">
                                                             <option value="" selected >دسته اصلی</option>
                                                             <?php
-                                                            $selectAdminJobsSet = mysqli_query($conn,"SELECT * FROM collection");
+                                                            $selectAdminJobsSet = mysqli_query($conn,"SELECT * FROM cat");
                                                             while ($rowAdminSet = mysqli_fetch_assoc($selectAdminJobsSet)){
                                                                 echo '
-                                                     <option value="'.$rowAdminSet['collectionId'].'">'.$rowAdminSet['collectionName'].'</option>';
+                                                     <option value="'.$rowAdminSet['catId'].'">'.$rowAdminSet['catName'].'</option>';
                                                             }
                                                             ?>
                                                         </select>                                                    </div>
@@ -148,7 +148,27 @@ include 'inc/inc.php';
                                                                 </div>
                                                             </div>
                                                         </section>
-                                                    </div>
+                                                        </div> <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <section class="panel">
+                                                                <header class="panel-heading">
+                                                                    متن کوچک
+
+                                                                </header>
+
+                                                                <div class="panel-body">
+                                                                    <div class="form">
+                                                                        <form action="#" class="form-horizontal">
+                                                                            <div class="form-group">
+                                                                                <div class="col-sm-10">
+                                                                                    <textarea class="form-control ckeditor" name="Detail2" id="Detail2" rows="6"></textarea>
+                                                                                </div>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </section>
+                                                        </div>
 <!--                                                </div><div class="row">-->
 <!--                                                    <div class="col-lg-12">-->
 <!--                                                        <section class="panel">-->
@@ -307,11 +327,12 @@ function upload() {
 function submit_post() {
     border_defult();
     var y = 0;
-    var title,name,parent,detail,detailRight,detailLeft;
+    var title,name,parent,detail,detailRight,detailLeft,detail2;
     title = $('#title').val();
     name = $('#name').val();
     parent = $('#parent option:selected').val();
     detail = CKEDITOR.instances["Detail"].getData();
+    detail2 = CKEDITOR.instances["Detail2"].getData();
     var img = localStorage.getItem('imgSet');
 
     if(name===''){
@@ -333,6 +354,7 @@ function submit_post() {
                 name:name,
                 parent:parent,
                 detail:detail,
+                detail2:detail2,
                 detailRight:detailRight,
                 detailLeft:detailLeft,
                 img: img

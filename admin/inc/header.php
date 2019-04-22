@@ -15,7 +15,7 @@
             <div data-original-title="Toggle Navigation" data-placement="right" class="icon-reorder tooltips"></div>
         </div>
         <!--logo start-->
-        <a href="#" class="logo">کلید اول</span></a>
+        <a href="#" class="logo">وب و تل</span></a>
         <!--logo end-->
         <div class="nav notify-row" id="top_menu">
             <!--  notification start -->
@@ -117,14 +117,7 @@
                     </a>
                     <ul class="dropdown-menu extended logout">
                         <div class="log-arrow-up"></div>
-                        <li><a href="profile_admin.php?id=<?php echo $_SESSION['id']?>"><i class=" icon-suitcase"></i>پروفایل</a></li>
-                        <?php
-                        if($_SESSION['level']=='1') {
-                            ?>
-                            <li><a href="setting.php"><i class="icon-cog"></i> تنظیمات</a></li>
-                            <?php
-                        }
-                        ?>
+
                         <li><a href="ajax/logout.php"><i class="icon-key"></i> خروج</a></li>
                     </ul>
                 </li>

@@ -63,12 +63,7 @@ include 'inc/inc.php';
                                                         <input type="text" class="form-control" id="password">
                                                     </div>
                                                 </div>
-                                                <div class="form-group">
-                                                    <label class="col-sm-2 control-label">نام مشاور املاک</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="occupation">
-                                                    </div>
-                                                </div>
+
                                                 <div class="form-group">
                                                     <div class="col-lg-offset-2 col-lg-10">
                                                         <button type="button" onclick="submit_admin()" class="btn btn-success">ثبت</button>
@@ -134,7 +129,7 @@ function submit_admin() {
     mobile = $('#mobile').val();
     tell = $('#tellPhone').val();
     userName = $('#userName').val();
-    occupation = $('#occupation').val();
+    occupation = '';
     if(email===''){
         $('#email').css('border','2px solid red');
          y = 1;
