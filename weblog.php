@@ -4,7 +4,10 @@
 <body class="otherPages">
 
 <?php
+include "class/dataBase.php";
+$db = new dataBase();
 include "inc/header.php";
+
 ?>
 <style>
     .Images{
@@ -170,10 +173,15 @@ include "inc/header.php";
                 <div class="col-md-12 col-lg-12" style="border:2px solid #9d9d9d;padding: 0;margin-bottom: 15px">
                     <h3 style="border-bottom: 2px solid black;padding:5px 10px 10px 0px">دسته بندی</h3>
                     <ul style="list-style-type: none;color:#742a9d">
-                        <li>مخابرات و شبکه</li>
-                        <li>مخابرات و شبکه</li>
-                        <li>مخابرات و شبکه</li>
-                        <li>مخابرات و شبکه</li>
+                        <?php
+                        $QW = $db::Query("SELECT * FROM cat");
+                        while ($rowQW = mysqli_fetch_assoc($QW)){
+                            ?>
+                            <li><a href="weblog.php?id=<?php echo $rowQW['catId'];?>"><?php echo $rowQW['catName'];?></li>
+                        <?php
+                        }
+                        ?>
+
                     </ul>
                 </div>
                 <!--اخرین پست ها-->
