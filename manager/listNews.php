@@ -15,29 +15,31 @@ include "inc/header.php"
                                 <thead>
                                     <tr>
                                         <th>شماره</th>
-                                        <th class="hidden-phone">سری</th>
-                                        <th class="hidden-phone">نام وکیل</th>
+                                        <th class="hidden-phone">عنوان</th>
                                         <th class="hidden-phone">تاریخ</th>
-                                        <th class="hidden-phone">زمان</th>
                                         <th class="hidden-phone">عملیات</th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
 
 
                                 <?php
-                                $select = "SELECT * FROM lawyer";
+                                $select = "SELECT * FROM news";
+                                $i='1';
                                 $rowLawyer = $db::Query($select);
                                 while ($row = mysqli_fetch_assoc($rowLawyer)){
                                 ?>
 
                                     <tr class="odd gradeX">
-                                        <td><?php echo $row['lawyerName'] ?></td>
-                                        <td><?php echo $row['lawyerFamily'] ?></td>
-                                        <td><?php echo $row['lawyerNationalCode'] ?></td>
-                                        <td><?php echo $row['lawyerFileNumber'] ?></td>
-                                        <td><?php echo $db::G2J($row['lawyerRegDate']) ?></td>
-                                        <td><?php echo $row['lawyerRegTime'] ?></td>
+                                        <td><?php echo $i ?></td>
+                                        <td><?php echo $row['newsTitle'] ?></td>
+                                        <td><?php echo $db::G2J($row['newsRegDate']) ?></td>
+                                        <td>
+                                            <a href="editNews.php?id=<?php echo $row['newsId']?>">ویرایش</a>
+                                            \
+                                            <a href="request/deleteNews.php?id=<?php echo $row['newsId']?>">حذف</a>
+                                        </td>
 
                                     </tr>
 

@@ -4,9 +4,19 @@
 <body class="otherPages">
 
 <?php
+
 include "class/dataBase.php";
 $db = new dataBase();
 include "inc/header.php";
+if(isset($_GET['id']) && $_GET['id']!=''){
+
+    $id = mysqli_real_escape_string($db::connection(),$_GET['id']);
+
+    $where = "AND newsCatId='$id'";
+
+}else{
+    $where ="";
+}
 
 ?>
 <style>
@@ -105,50 +115,32 @@ include "inc/header.php";
 <div style="overflow: hidden">
     <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
         <div class="col-md-9 col-sm-12 col-lg-9 col-xs-12" style="padding: 30px;">
-            <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12" style="box-shadow: 0px 1px 10px silver;padding: 0;margin-top: 3%" id="axim">
-                <div class="col-md-9 col-sm-9 col-lg-9 col-xs-9" style="direction: rtl">
-                    <h2 style="direction: rtl">  <b> آموزش تغییرDNS</b></h2>
-                    <p style="font-size: 15px;text-align: justify">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و . </p>
-                    <button class="btn" style="border-radius: 12px;float:left; width:18%;color: white;background-color: #752b9c">ادامه مطلب</button>
-                </div>
-                <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3" style="direction: rtl;padding: 0">
-                    <img  src="Images/55.jpg">
+            <?php
+            $Q = $db::Query("SELECT * FROM news where newsId IS NOT null $where ORDER BY date(newsRegDate) DESC , time(newsRegTime) DESC ");
+            while ($rowS = mysqli_fetch_assoc($Q)){
+                ?>
+                <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12" style="box-shadow: 0px 1px 10px silver;padding: 0;margin-top: 3%" id="axim">
+                    <div class="col-md-9 col-sm-9 col-lg-9 col-xs-9" style="direction: rtl">
+                        <h2 style="direction: rtl">  <b><?php echo $rowS['newsTitle']?></b></h2>
+                        <p style="font-size: 15px;text-align: justify">
+                            <?php
+                            echo $rowS['newsShortText']
+                            ?>
+                        </p>
+                        <button class="btn" style="border-radius: 12px;float:left; width:18%;color: white;background-color: #752b9c">ادامه مطلب</button>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3" style="direction: rtl;padding: 0">
+                        <img style="    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    width: 100%;
+}"  src="Images/<?php echo $rowS['imgShort']?>.jpg">
+                    </div>
+
                 </div>
 
-            </div>
-            <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12" style="box-shadow: 0px 1px 10px silver;padding: 0;margin-top: 3%" id="axim">
-                <div class="col-md-9 col-sm-9 col-lg-9 col-xs-9" style="direction: rtl">
-                    <h2 style="direction: rtl">  <b> آموزش تغییرDNS</b></h2>
-                    <p style="font-size: 15px;text-align: justify">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و . </p>
-                    <button class="btn" style="border-radius: 12px;float:left; width:18%;color: white;background-color: #752b9c">ادامه مطلب</button>
-                </div>
-                <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3" style="direction: rtl;padding: 0">
-                    <img  src="Images/65.png">
-                </div>
-
-            </div>
-            <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12" style="box-shadow: 0px 1px 10px silver;padding: 0;margin-top: 3%" id="axim">
-                <div class="col-md-9 col-sm-9 col-lg-9 col-xs-9" style="direction: rtl">
-                    <h2 style="direction: rtl">  <b> آموزش تغییرDNS</b></h2>
-                    <p style="font-size: 15px;text-align: justify">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و . </p>
-                    <button class="btn" style="border-radius: 12px;float:left; width:18%;color: white;background-color: #752b9c">ادامه مطلب</button>
-                </div>
-                <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3" style="direction: rtl;padding: 0">
-                    <img  src="Images/022.png">
-                </div>
-
-            </div>
-            <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12" style="box-shadow: 0px 1px 10px silver;padding: 0;margin-top: 3%" id="axim">
-                <div class="col-md-9 col-sm-9 col-lg-9 col-xs-9" style="direction: rtl">
-                    <h2 style="direction: rtl">  <b> آموزش تغییرDNS</b></h2>
-                    <p style="font-size: 15px;text-align: justify">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و . </p>
-                    <button class="btn" style="border-radius: 12px;float:left; width:18%;color: white;background-color: #752b9c">ادامه مطلب</button>
-                </div>
-                <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3" style="direction: rtl;padding: 0">
-                    <img  src="Images/99.png">
-                </div>
-
-            </div>
+            <?php
+            }
+            ?>
             <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12" style="text-align: center">
 <!--                <nav id="page">-->
 <!--                    <a class="vv" href="#"><p style="color: white"> < </p></a>-->
@@ -190,17 +182,19 @@ include "inc/header.php";
                         <h3 class="h3" style="font-size: 25px">آخرین پست ها</h3>
                         <hr class="hr-dow" style="">
                         <div class="font-siz">
-                            <p style="color: #b2b2b2;background-color: #f0f0f0"><a href="#"
-                                                                                   style="color: #752b9c;text-decoration: none;background-color: #f0f0f0">DNS
-                                    آموزش تغییر سرور </a>1390/7/1</p><br>
-                            <p style="color: #b2b2b2;background-color: #f0f0f0"><a href="#"
-                                                                                   style="color: #752b9c;text-decoration: none;background-color: #f0f0f0;padding-left: 11%">استاندارد
-                                    مختلف شبکه</a>1390/7/1</p><br>
-                            <p style="color: #b2b2b2;background-color: #f0f0f0"><a href="#"
-                                                                                   style="color: #752b9c;text-decoration: none;background-color: #f0f0f0;padding-left: 36%">اینترنت
-                                    اشیاء</a>1390/7/1</p><br>
-                            <p style="color: #b2b2b2;background-color: #f0f0f0"><a href="#" style="color: #752b9c;text-decoration: none;background-color: #f0f0f0;padding-left: 33%">اینترنت
-                                    مرکزی</a>1390/7/1</p><br>
+                            <?php
+                            $Q = $db::Query("SELECT * FROM news where newsId IS NOT null $where ORDER BY date(newsRegDate) DESC , time(newsRegTime) DESC LIMIT 4 ");
+
+                            while ($rowS = mysqli_fetch_assoc($Q)){
+?>
+                                <p style="color: #b2b2b2;background-color: #f0f0f0"><a href="#"
+                                                                                       style="color: #752b9c;text-decoration: none;background-color: #f0f0f0">
+                                        <?php echo $rowS['newsTitle']?> </a><?php echo $db::G2J($rowS['newsRegDate'])?></p><br>
+                            <?php
+                            }
+                            ?>
+
+
                         </div>
                     </div>
                 </div>

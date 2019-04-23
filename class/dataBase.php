@@ -122,7 +122,7 @@
             $year = substr($date,0,4);
             $month = substr($date,5,2);
             $day = substr($date,8,2);
-            include_once ('../function/jdf.php');
+            include_once ('jdf.php');
             $persianDate = gregorian_to_jalali($year,$month,$day,'/');
             return $persianDate;
         }
@@ -131,7 +131,7 @@
             $year = substr($date,0,4);
             $month = substr($date,5,2);
             $day = substr($date,8,2);
-            include_once ('../function/jdf.php');
+            include_once ('jdf.php');
             $gregorianDate = gregorian_to_jalali($year,$month,$day,'/');
             return $gregorianDate;
 
@@ -172,5 +172,23 @@
             $i = $n=number_format(abs($n),$r);
             $j = (($j = strlen($i)) > 3) ? $j % 3 : 0;
             return  $symbol.$sign .($j ? substr($i,0, $j) + $t : '').preg_replace('/(\d{3})(?=\d)/',"$1" + $t,substr($i,$j));
+        }
+
+        public static function generateRandomString($length = 20){ //FUNCTION FOR generate RAND VAR
+            $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            $charactersLength = strlen($characters);
+            $randomString = '';
+            for ($i = 0; $i < $length; $i++) {
+                $randomString .= $characters[rand(0, $charactersLength - 1)];
+            }
+            return $randomString;
+        }
+
+        public static function saveImage($base64img,$url,$name){
+            define('UPLOAD_DIR',$url);
+            $base64img = str_replace('data:image/jpeg;base64,', '', $base64img);
+            $data = base64_decode($base64img);
+            $file = UPLOAD_DIR .$name.'.jpg';
+            file_put_contents($file, $data);
         }
 }

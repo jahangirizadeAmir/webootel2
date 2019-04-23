@@ -45,7 +45,6 @@ if(
 
     <script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>    <script src="js/cropit.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
     <!--[if lt IE 9]>
@@ -106,6 +105,20 @@ if(
                     </a>
                     <ul class="sub" style="overflow: hidden; display: none;">
                         <li><a class="" href="addCat.php">مدیریت دسته بندی</a></li>
+                        <li><a class="" href="listNews.php">لیست اخبار</a></li>
+                        <li><a class="" href="addNews.php">ثبت خبر</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="">
+                        <i class="icon-user"></i>
+                        <span>مدیریت مشتریان</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub" style="overflow: hidden; display: none;">
+                        <li><a class="" href="listCheckService.php">درخواست اعتبار سنجی</a></li>
+                        <li><a class="" href="listNews.php">لیست اخبار</a></li>
+                        <li><a class="" href="addNews.php">ثبت خبر</a></li>
                     </ul>
                 </li>
 
