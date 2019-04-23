@@ -117,7 +117,7 @@ if(
                     </a>
                     <ul class="sub" style="overflow: hidden; display: none;">
                         <li><a class="" href="listCheckService.php">درخواست اعتبار سنجی</a></li>
-                        <li><a class="" href="listNews.php">لیست اخبار</a></li>
+                        <li><a class="" href="listNews.php">لیست ثبت نام شده ها</a></li>
                         <li><a class="" href="addNews.php">ثبت خبر</a></li>
                     </ul>
                 </li>
